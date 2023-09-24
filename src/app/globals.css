@@ -2,26 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #141D26;
+  overflow-x: hidden;
+}
+.overlay{
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+.image-overlay{
+  background: rgba(253, 111, 0, 0.60);
+}
+
+
+@layer components {
+  .global-padding {
+    @apply px-[5%]
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .flex-rows {
+    @apply flex items-center;
+  }
+
+  .flex-cols {
+    @apply flex flex-col;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center
+  }
+
+  .btn-outline {
+    @apply flex justify-center items-center max-w-fit text-primaryCTA border border-primaryCTA outline-none py-2 px-6 rounded-3xl hover: bg-primaryCTA hover:text-black transition-all duration-200;
+  }
+
+  .btn-fill {
+    @apply flex justify-center items-center text-white max-w-fit bg-primaryCTA border border-primaryCTA outline-none py-2 px-6 rounded-3xl hover:opacity-80;
+  }
+
+  .text-large {
+    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight md:leading-tight lg:leading-tight xl:leading-tight;
+  }
+
+  .text-medium {
+    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight md:leading-tight lg:leading-tight xl:leading-tight;
+  }
 }
