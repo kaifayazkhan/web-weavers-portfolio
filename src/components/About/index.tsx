@@ -3,9 +3,9 @@ import Range from "./Range"
 export default function About() {
     return (
         <section className="mt-16">
-            <div className="flex-between flex-cols md:flex-row">
-                <div className="flex-1 flex-center md:flex-rows relative max-w-sm md:max-w-full w-full h-full">
-                    <Image src="/assets/about.png" alt="About" className="object-scale-down relative  w-full" width={400} height={400} />
+            <div className="flex-between flex-cols md:flex-row gap-6">
+                <div className="flex-1 relative max-w-sm md:max-w-full w-full h-full">
+                    <Image src="/assets/about.png" alt="About" className="object-scale-down relative w-full max-w-lg" width={400} height={400} />
                 </div>
                 <div className="flex-1">
                     <div>

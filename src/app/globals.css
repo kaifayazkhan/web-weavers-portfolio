@@ -7,13 +7,11 @@ body {
   color: #141D26;
   overflow-x: hidden;
 }
-.overlay{
+
+.overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0,0,0,0.5);
-}
-.image-overlay{
-  background: rgba(253, 111, 0, 0.60);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 
